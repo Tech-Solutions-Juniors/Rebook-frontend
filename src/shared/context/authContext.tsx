@@ -6,7 +6,7 @@ export interface IAuthContext {
   token: string | null;
   loading: boolean;
   error: string | null;
-  signin: (email: string, password: string) => Promise<null>;
+  signin: (email: string, password: string) => Promise<void>;
 }
 
 interface Props {
@@ -40,6 +40,7 @@ export function AuthProvider({ children }: Props) {
       setError(message);
     }
     setLoading(() => false);
+    return;
   }
 
   return (
