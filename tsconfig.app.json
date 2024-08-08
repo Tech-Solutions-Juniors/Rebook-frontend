@@ -21,7 +21,16 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+
+    //
+    "baseUrl": "./",
+    "paths": {
+      "@base/*": ["src/*"],
+      "@assets/*": ["src/shared/assets/*"],
+      "@layouts/*": ["src/shared/layouts/*"],
+      "@components/*": ["src/shared/components/*"],
+    }
   },
   "include": ["src"]
 }
