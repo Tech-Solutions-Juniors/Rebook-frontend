@@ -69,10 +69,7 @@ const Header: React.FC = () => {
         </LinksContainer>
 
         <LoginButton to="/login">
-          <LoginButtonText
-            to="/signin"
-            onClick={(e) => setNavBarOffset(e.currentTarget.offsetLeft)}
-          >
+          <LoginButtonText>
             Log in
           </LoginButtonText>
         </LoginButton>

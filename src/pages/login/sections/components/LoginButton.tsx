@@ -1,16 +1,17 @@
 import React from "react";
 
-import {Button} from "../styles/loginStyles"
+import {ButtonLogin} from "../styles/loginStyles"
 
 interface LoginButtonProps {
   loading: boolean;
   onClick: () => void;
+  text: string;
 }
 
-const LoginButton: React.FC<LoginButtonProps> = ({ loading, onClick }) => (
-  <Button disabled={loading} onClick={onClick}>
-    Login
-  </Button>
+const LoginButton: React.FC<LoginButtonProps> = ({ loading, onClick, text }) => (
+  <ButtonLogin disabled={loading} onClick={onClick}>
+    {text}
+  </ButtonLogin>
 );
 
 export default LoginButton;

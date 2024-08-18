@@ -116,8 +116,8 @@ export const LoginButton = styled(Link)`
   background: #000;
 `;
 
-export const LoginButtonText = styled(Link)`
+export const LoginButtonText = styled.span`
   font-weight: 700;
   color: #fff;
-  text-decoration: none;
+  text-decoration: none
 `;
