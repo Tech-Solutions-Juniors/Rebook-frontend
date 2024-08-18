@@ -149,7 +149,7 @@ export const Form = styled.form`
 `;
 
 export const ButtonLogin = styled.button`
-  padding: 10px 95px;
+  padding: 10px 70px;
   color: white;
   background-color: #ffc107;
   margin: 20px;
