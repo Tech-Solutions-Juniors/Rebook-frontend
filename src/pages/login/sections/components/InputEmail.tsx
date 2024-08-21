@@ -1,18 +1,17 @@
 import React from "react";
-
-import {Input} from "../styles/loginStyles"
+import { Input } from "../styles/loginStyles";
 
 interface InputEmailProps {
   value: string;
   onChange: (value: string) => void;
-  emailPlacehouder: string;
+  placeholder: string;
 }
 
-const InputEmail: React.FC<InputEmailProps> = ({ value, onChange, emailPlacehouder }) => (
+const InputEmail: React.FC<InputEmailProps> = ({ value, onChange, placeholder }) => (
   <Input
-    type="text"
+    type="email"
     name="email"
-    placeholder={emailPlacehouder}
+    placeholder={placeholder}
     value={value}
     onChange={(e) => onChange(e.target.value)}
   />

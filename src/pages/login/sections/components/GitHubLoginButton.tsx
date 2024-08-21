@@ -4,12 +4,12 @@ import { SocialButton } from "../styles/loginStyles";
 interface SocialLoginButtonProps {
   loading: boolean;
   onClick: () => void;
-  url: string;
+  iconUrl: string;
 }
 
-const GitHubLoginButton: React.FC<SocialLoginButtonProps> = ({ loading, onClick,url }) => (
+const GitHubLoginButton: React.FC<SocialLoginButtonProps> = ({ loading, onClick, iconUrl }) => (
   <SocialButton disabled={loading} onClick={onClick}>
-    <img src={url} alt="GitHub Icon" />
+    <img src={iconUrl} alt="GitHub Icon" />
   </SocialButton>
 );
 

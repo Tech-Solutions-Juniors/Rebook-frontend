@@ -1,6 +1,5 @@
 import React from "react";
-
-import {ButtonLogin} from "../styles/loginStyles"
+import { ButtonLogin } from "../styles/loginStyles";
 
 interface LoginButtonProps {
   loading: boolean;

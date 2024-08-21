@@ -1,31 +1,31 @@
-import LoginPage from "./sections/pages/loginPage";
+import LoginPage from "./sections/pages/LoginPage";
 
-import Logo from "@assets/reboock-logo.png";
+import Logo from "@assets/rebook-logo.png";
 import LoginTitle from "@assets/login-title.png";
 import GoogleIcon from "@assets/Google-icon.png";
-import GitHubIcon from "@assets/Github-icon.png";
-import FaceBookIcon from "@assets/facebook-icon.png";
+import GitHubIcon from "@assets/GitHub-icon.png";
+import FacebookIcon from "@assets/Facebook-icon.png";
 import TextLogo from "@assets/rebook-text-logo-white.png";
 
 const Login = () => {
   return (
     <main>
       <LoginPage 
-        urlLogo={Logo}
-        urlLogin={LoginTitle}
-        textFildEmail="Email"
-        placeholderEmail="example@email.com"
-        textFildSenha="Password"
-        placeholderSenha="Password" 
-        textForgot="Forgot Password?"
-        textSocialLogins="Or continue with"
-        urlIconGoogle={GoogleIcon}
-        urlIconGithub={GitHubIcon}
-        urlIconFacebook={FaceBookIcon}
-        textRegister="Don’t have an account yet?"
-        textLink=" Register for free"
-        textBottonLogin="Log in"
-        urlLogoText={TextLogo}
+        logoUrl={Logo}
+        loginTitleUrl={LoginTitle}
+        emailFieldText="Email"
+        emailPlaceholder="example@email.com"
+        passwordFieldText="Password"
+        passwordPlaceholder="Password"
+        forgotPasswordText="Forgot Password?"
+        socialLoginsText="Or continue with"
+        googleIconUrl={GoogleIcon}
+        githubIconUrl={GitHubIcon}
+        facebookIconUrl={FacebookIcon}
+        registerText="Don’t have an account yet?"
+        registerLinkText=" Register for free"
+        loginButtonText="Log in"
+        textLogoUrl={TextLogo}
       />
     </main>
   );

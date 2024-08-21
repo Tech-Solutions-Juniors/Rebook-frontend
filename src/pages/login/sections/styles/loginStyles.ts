@@ -8,7 +8,6 @@ export const CardLogin = styled.div`
   color: #ffffff;
   display: flex;
   flex-direction: column;
-  justify-content: centeter;
   align-items: center;
   font-family: 'Inter', sans-serif;
 
@@ -17,39 +16,32 @@ export const CardLogin = styled.div`
     margin: 25px 0 20px 0 ;
   }
 
-  .password{
-  
-  }
-
-
   .Link {
     text-decoration: none;
     color: #ffffff;
   }
 
   .ContinueWith {
-  font-size: 16px;
-  color: #7B7B7B;
-  margin: 0 0 20px 0;
-  display: flex;
-  align-items: center;
-  position: relative;
-  padding-right: 20px; /* Espaço para a linha */
-}
+    font-size: 16px;
+    color: #7B7B7B;
+    margin: 0 0 20px 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-right: 20px;
+  }
 
-.ContinueWith::after {
-  content: "";
-  position: absolute;
-  right: 0;
-  width: 210px; 
-  height: 1px; 
-  background-color: #7B7B7B;
-}
+  .ContinueWith::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 210px; 
+    height: 1px; 
+    background-color: #7B7B7B;
+  }
 
   .Register {
-    
     font-style: italic;
-    
     font-size: 13px;
     color: #7B7B7B;
   }
@@ -74,17 +66,9 @@ export const ImageLogin = styled.div`
   }
 `;
 
-export const ImageLogoText = styled.div`
-  margin: 10px;  
 
-  img {
-    width: 60px;
-    height: auto;
-   
-  }
-`;
 
-export const TextFild = styled.div`
+export const TextField = styled.div`
   margin: 25px 0 0px 0;
 `;
 
@@ -92,9 +76,7 @@ export const Input = styled.input`
   width: 100%;
   border-radius: 10px;
   padding: 6px 0px 6px 15px;
-  
 `;
-
 
 export const ContainerInput = styled.div`
   position: relative;
@@ -107,7 +89,7 @@ export const ToggleIcon = styled.div`
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
-  color: #7B7B7B; /* Cor do ícone */
+  color: #7B7B7B;
 `;
 
 export const Container = styled.section`
@@ -116,15 +98,14 @@ export const Container = styled.section`
 `;
 
 export const SocialButton = styled.button`
-  padding: 12px 37px ;
+  padding: 12px 37px;
   border-radius: 10px;
   cursor: pointer;
-  
   
   img {
     display: flex;
     flex-direction: column;
-    justify-content: centeter;
+    justify-content: center;
     align-items: center;
     width: 25px;
     height: auto;
@@ -152,7 +133,15 @@ export const ButtonLogin = styled.button`
   padding: 10px 70px;
   color: white;
   background-color: #ffc107;
-  margin: 20px;
+  margin: 20px 0 20px 0;
   border-radius: 10px;
   cursor: pointer;
+`;
+
+export const ImageLogoText = styled.div`
+  margin: 10px 0 0 0; 
+  img {
+    width: 60px;
+    height: auto;
+  }
 `;

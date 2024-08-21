@@ -1,16 +1,15 @@
 import React from "react";
 import { SocialButton } from "../styles/loginStyles";
 
-
 interface SocialLoginButtonProps {
   loading: boolean;
   onClick: () => void;
-  url: string;
+  iconUrl: string;
 }
 
-const GoogleLoginButton: React.FC<SocialLoginButtonProps> = ({ loading, onClick,url }) => (
-  <SocialButton disabled={loading} onClick={onClick} >
-    <img src={url} alt="Google Icon" />
+const GoogleLoginButton: React.FC<SocialLoginButtonProps> = ({ loading, onClick, iconUrl }) => (
+  <SocialButton disabled={loading} onClick={onClick}>
+    <img src={iconUrl} alt="Google Icon" />
   </SocialButton>
 );
 

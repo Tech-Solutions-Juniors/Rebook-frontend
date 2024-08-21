@@ -1,7 +1,5 @@
 import React, { useState } from "react";
-
-import { useAuthContext } from "../../../../shared/hook/useAuthContext";
-
+import { useAuthContext } from "../../../../shared/hook/useAuthContext"; // Ajuste o caminho conforme necessário
 import {
   CardLogin,
   Container,
@@ -10,9 +8,8 @@ import {
   ImageLogo,
   ImageLogoText,
   MainLogin,
-  TextFild,
+  TextField,
 } from "../styles/loginStyles";
-
 import InputEmail from "../components/InputEmail";
 import InputPassword from "../components/InputPassword";
 import LoginButton from "../components/LoginButton";
@@ -20,25 +17,24 @@ import ErrorMessage from "../components/ErrorMessage";
 import GoogleLoginButton from "../components/GoogleLoginButton";
 import GitHubLoginButton from "../components/GitHubLoginButton";
 import FacebookLoginButton from "../components/FacebookLoginButton";
-
 import { Props } from "../types/props";
 
 const LoginPage: React.FC<Props> = ({
-  urlLogo,
-  urlLogin,
-  textFildEmail,
-  placeholderEmail,
-  textFildSenha,
-  placeholderSenha,
-  textForgot,
-  textSocialLogins,
-  urlIconGoogle,
-  urlIconGithub,
-  urlIconFacebook,
-  textRegister,
-  textLink,
-  textBottonLogin,
-  urlLogoText,
+  logoUrl,
+  loginTitleUrl,
+  emailFieldText,
+  emailPlaceholder,
+  passwordFieldText,
+  passwordPlaceholder,
+  forgotPasswordText,
+  socialLoginsText,
+  googleIconUrl,
+  githubIconUrl,
+  facebookIconUrl,
+  registerText,
+  registerLinkText,
+  loginButtonText,
+  textLogoUrl,
 }) => {
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
@@ -51,82 +47,83 @@ const LoginPage: React.FC<Props> = ({
   }
 
   async function handleGoogleLogin() {
-    // lógica para login com Google
+    // logic for Google login
   }
 
   async function handleGitHubLogin() {
-    // lógica para login com GitHub
+    // logic for GitHub login
   }
 
   async function handleFacebookLogin() {
-    // lógica para login com Facebook
+    // logic for Facebook login
   }
 
   return (
     <MainLogin>
       <CardLogin>
         <ImageLogo>
-          <img src={urlLogo} alt="Logo REBOOK" />
+          <img src={logoUrl} alt="Logo REBOOK" />
         </ImageLogo>
         <Form>
           <ImageLogin>
-            <img src={urlLogin} alt="Log in" />
+            <img src={loginTitleUrl} alt="Log in" />
           </ImageLogin>
 
-          <TextFild>
-            <label htmlFor="Email">{textFildEmail}</label>
+          <TextField>
+            <label htmlFor="Email">{emailFieldText}</label>
             <br />
             <InputEmail
               value={email}
               onChange={setEmail}
-              emailPlacehouder={placeholderEmail}
+              placeholder={emailPlaceholder}
             />
-          </TextFild>
+          </TextField>
 
-          <TextFild>
-            <label htmlFor="Senha">{textFildSenha}</label>
+          <TextField>
+            <label htmlFor="Password">{passwordFieldText}</label>
             <br />
             <InputPassword
               value={password}
               onChange={setPassword}
-              passwordPlaceholder={placeholderSenha}
+              placeholder={passwordPlaceholder}
             />
-          </TextFild>
-          <p className="Forgot"><a className="Link" href="">{textForgot}</a></p>
-          <p className="ContinueWith">{textSocialLogins}</p>
+          </TextField>
+          <p className="Forgot"><a className="Link" href="">{forgotPasswordText}</a></p>
+          <p className="ContinueWith">{socialLoginsText}</p>
 
           <Container>
             <GoogleLoginButton
               loading={loading}
               onClick={handleGoogleLogin}
-              url={urlIconGoogle}
+              iconUrl={googleIconUrl}
             />
             <GitHubLoginButton
               loading={loading}
               onClick={handleGitHubLogin}
-              url={urlIconGithub}
+              iconUrl={githubIconUrl}
             />
             <FacebookLoginButton
               loading={loading}
               onClick={handleFacebookLogin}
-              url={urlIconFacebook}
+              iconUrl={facebookIconUrl}
             />
           </Container>
         </Form>
         <p className="Register">
-          {textRegister}
-          <a className="Link" href="">{textLink}</a>
+          {registerText}
+          <a className="Link" href="">{registerLinkText}</a>
         </p>
         {error && <ErrorMessage message={error} />}
         <LoginButton
           loading={loading}
           onClick={handleSubmit}
-          text={textBottonLogin}
+          text={loginButtonText}
         />
         <ImageLogoText>
-          <img src={urlLogoText} alt="REBOOK" />
+        <img src={textLogoUrl} alt="Text Logo" />
         </ImageLogoText>
       </CardLogin>
+      
     </MainLogin>
   );
 };

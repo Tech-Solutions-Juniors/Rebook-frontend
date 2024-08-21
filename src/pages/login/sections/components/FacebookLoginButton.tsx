@@ -4,13 +4,12 @@ import { SocialButton } from "../styles/loginStyles";
 interface SocialLoginButtonProps {
   loading: boolean;
   onClick: () => void;
-  url: string;
+  iconUrl: string;
 }
 
-const FacebookLoginButton: React.FC<SocialLoginButtonProps> = ({ loading, onClick,url }) => (
+const FacebookLoginButton: React.FC<SocialLoginButtonProps> = ({ loading, onClick, iconUrl }) => (
   <SocialButton disabled={loading} onClick={onClick}>
-    <img src={url} alt="FaceBook Icon" />
-    
+    <img src={iconUrl} alt="Facebook Icon" />
   </SocialButton>
 );
 

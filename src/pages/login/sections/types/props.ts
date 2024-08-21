@@ -1,32 +1,32 @@
 export interface Props {
-  /** URL da imagem do logo */
-  urlLogo: string;
-  /** URL da imagem de login */
-  urlLogin: string;
-  /** Texto do campo de email */
-  textFildEmail: string;
-  /** Placeholder do campo de email */
-  placeholderEmail: string;
-  /** Texto do campo de senha */
-  textFildSenha: string;
-  /** Placeholder do campo de senha */
-  placeholderSenha: string;
-  /** Texto do link de esqueci a senha */
-  textForgot: string;
-  /** Texto para login com redes sociais */
-  textSocialLogins: string;
-  /** URL do ícone do Google */
-  urlIconGoogle: string;
-  /** URL do ícone do GitHub */
-  urlIconGithub: string;
-  /** URL do ícone do Facebook */
-  urlIconFacebook: string;
-  /** Texto para registro */
-  textRegister: string;
-  /** Texto do link de registro */
-  textLink: string;
-  /** Texto do botão de login */
-  textBottonLogin: string;
-  /** URL da imagem do logo de texto */
-  urlLogoText: string;
+  /** URL of the logo image */
+  logoUrl: string;
+  /** URL of the login title image */
+  loginTitleUrl: string;
+  /** Text for the email field */
+  emailFieldText: string;
+  /** Placeholder for the email field */
+  emailPlaceholder: string;
+  /** Text for the password field */
+  passwordFieldText: string;
+  /** Placeholder for the password field */
+  passwordPlaceholder: string;
+  /** Text for the forgot password link */
+  forgotPasswordText: string;
+  /** Text for the social logins section */
+  socialLoginsText: string;
+  /** URL of the Google icon */
+  googleIconUrl: string;
+  /** URL of the GitHub icon */
+  githubIconUrl: string;
+  /** URL of the Facebook icon */
+  facebookIconUrl: string;
+  /** Text for the registration prompt */
+  registerText: string;
+  /** Text for the registration link */
+  registerLinkText: string;
+  /** Text for the login button */
+  loginButtonText: string;
+  /** URL of the text logo image */
+  textLogoUrl: string;
 }
