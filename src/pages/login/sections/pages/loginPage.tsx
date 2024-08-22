@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useAuthContext } from "../../../../shared/hook/useAuthContext"; // Ajuste o caminho conforme necessário
 import {
   CardLogin,
@@ -10,6 +10,7 @@ import {
   MainLogin,
   TextField,
 } from "../styles/loginStyles";
+
 import InputEmail from "../components/InputEmail";
 import InputPassword from "../components/InputPassword";
 import LoginButton from "../components/LoginButton";
@@ -17,25 +18,9 @@ import ErrorMessage from "../components/ErrorMessage";
 import GoogleLoginButton from "../components/GoogleLoginButton";
 import GitHubLoginButton from "../components/GitHubLoginButton";
 import FacebookLoginButton from "../components/FacebookLoginButton";
-import { Props } from "../types/props";
 
-const LoginPage: React.FC<Props> = ({
-  logoUrl,
-  loginTitleUrl,
-  emailFieldText,
-  emailPlaceholder,
-  passwordFieldText,
-  passwordPlaceholder,
-  forgotPasswordText,
-  socialLoginsText,
-  googleIconUrl,
-  githubIconUrl,
-  facebookIconUrl,
-  registerText,
-  registerLinkText,
-  loginButtonText,
-  textLogoUrl,
-}) => {
+const LoginPage = () => {
+  
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
 
@@ -57,73 +42,70 @@ const LoginPage: React.FC<Props> = ({
   async function handleFacebookLogin() {
     // logic for Facebook login
   }
-
   return (
     <MainLogin>
       <CardLogin>
         <ImageLogo>
-          <img src={logoUrl} alt="Logo REBOOK" />
+          <img src="@assets/rebook-logo.png" alt="Logo REBOOK" />
         </ImageLogo>
         <Form>
           <ImageLogin>
-            <img src={loginTitleUrl} alt="Log in" />
+            <img src="@assets/login-title.png" alt="Log in" />
           </ImageLogin>
 
           <TextField>
-            <label htmlFor="Email">{emailFieldText}</label>
+            <label htmlFor="Email">Email</label>
             <br />
             <InputEmail
               value={email}
               onChange={setEmail}
-              placeholder={emailPlaceholder}
+              placeholder="example@email.com"
             />
           </TextField>
 
           <TextField>
-            <label htmlFor="Password">{passwordFieldText}</label>
+            <label htmlFor="Password">Password</label>
             <br />
             <InputPassword
               value={password}
               onChange={setPassword}
-              placeholder={passwordPlaceholder}
+              placeholder="Password"
             />
           </TextField>
-          <p className="Forgot"><a className="Link" href="">{forgotPasswordText}</a></p>
-          <p className="ContinueWith">{socialLoginsText}</p>
-
+          <p className="Forgot"><a className="Link" href="">Forgot Password?</a></p>
+          <p className="ContinueWith">Or continue with</p>
           <Container>
             <GoogleLoginButton
               loading={loading}
               onClick={handleGoogleLogin}
-              iconUrl={googleIconUrl}
+              iconUrl="@assets/Google-icon.png"
             />
             <GitHubLoginButton
               loading={loading}
               onClick={handleGitHubLogin}
-              iconUrl={githubIconUrl}
+              iconUrl="@assets/GitHub-icon.png"
             />
             <FacebookLoginButton
               loading={loading}
               onClick={handleFacebookLogin}
-              iconUrl={facebookIconUrl}
+              iconUrl="@assets/Facebook-icon.png"
             />
           </Container>
         </Form>
         <p className="Register">
-          {registerText}
-          <a className="Link" href="">{registerLinkText}</a>
+          Don’t have an account yet?
+          <a className="Link" href=""> Register for free</a>
         </p>
         {error && <ErrorMessage message={error} />}
         <LoginButton
           loading={loading}
           onClick={handleSubmit}
-          text={loginButtonText}
+          text="Log in"
         />
         <ImageLogoText>
-        <img src={textLogoUrl} alt="Text Logo" />
+        <img src="@assets/rebook-text-logo-white.png" alt="Text Logo" />
         </ImageLogoText>
       </CardLogin>
-      
     </MainLogin>
   );
 };
