@@ -69,7 +69,9 @@ const Header: React.FC = () => {
         </LinksContainer>
 
         <LoginButton to="/login">
-          <LoginButtonText>Log in</LoginButtonText>
+          <LoginButtonText>
+            Log in
+          </LoginButtonText>
         </LoginButton>
       </RightContainer>
     </Container>

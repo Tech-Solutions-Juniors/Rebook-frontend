@@ -119,4 +119,5 @@ export const LoginButton = styled(Link)`
 export const LoginButtonText = styled.span`
   font-weight: 700;
   color: #fff;
+  text-decoration: none
 `;
