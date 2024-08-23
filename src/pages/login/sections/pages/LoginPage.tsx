@@ -9,7 +9,7 @@ import {
   ImageLogoText,
   MainLogin,
   TextField,
-} from "../styles/loginStyles";
+} from "../styles/LoginStyles";
 
 import InputEmail from "../components/InputEmail";
 import InputPassword from "../components/InputPassword";

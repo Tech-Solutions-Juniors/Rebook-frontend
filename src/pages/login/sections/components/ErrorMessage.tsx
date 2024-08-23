@@ -1,5 +1,5 @@
 import React from 'react';
-import { Error } from '../styles/loginStyles';
+import { Error } from '../styles/LoginStyles';
 
 interface ErrorMessageProps {
   message: string;

@@ -1,5 +1,5 @@
 import React from "react";
-import { SocialButton } from "../styles/loginStyles";
+import { SocialButton } from "../styles/LoginStyles";
 
 interface SocialLoginButtonProps {
   loading: boolean;

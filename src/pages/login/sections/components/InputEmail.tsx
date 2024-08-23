@@ -1,5 +1,5 @@
 import React from "react";
-import { Input } from "../styles/loginStyles";
+import { Input } from "../styles/LoginStyles";
 
 interface InputEmailProps {
   value: string;
