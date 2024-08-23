@@ -19,6 +19,13 @@ import GoogleLoginButton from "../components/GoogleLoginButton";
 import GitHubLoginButton from "../components/GitHubLoginButton";
 import FacebookLoginButton from "../components/FacebookLoginButton";
 
+import Logo from "@assets/rebook-logo.png";
+import LoginTitle from "@assets/login-title.png";
+import GoogleIcon from "@assets/Google-icon.png";
+import GitHubIcon from "@assets/GitHub-icon.png";
+import FacebookIcon from "@assets/Facebook-icon.png";
+import TextLogo from "@assets/rebook-text-logo-white.png";
+
 const LoginPage = () => {
   
   const [email, setEmail] = useState<string>("");
@@ -46,11 +53,11 @@ const LoginPage = () => {
     <MainLogin>
       <CardLogin>
         <ImageLogo>
-          <img src="@assets/rebook-logo.png" alt="Logo REBOOK" />
+          <img src= {Logo} alt="Logo REBOOK" />
         </ImageLogo>
         <Form>
           <ImageLogin>
-            <img src="@assets/login-title.png" alt="Log in" />
+            <img src= {LoginTitle} alt="Log in" />
           </ImageLogin>
 
           <TextField>
@@ -78,17 +85,17 @@ const LoginPage = () => {
             <GoogleLoginButton
               loading={loading}
               onClick={handleGoogleLogin}
-              iconUrl="@assets/Google-icon.png"
+              iconUrl={GoogleIcon}
             />
             <GitHubLoginButton
               loading={loading}
               onClick={handleGitHubLogin}
-              iconUrl="@assets/GitHub-icon.png"
+              iconUrl={GitHubIcon}
             />
             <FacebookLoginButton
               loading={loading}
               onClick={handleFacebookLogin}
-              iconUrl="@assets/Facebook-icon.png"
+              iconUrl={FacebookIcon}
             />
           </Container>
         </Form>
@@ -103,7 +110,7 @@ const LoginPage = () => {
           text="Log in"
         />
         <ImageLogoText>
-        <img src="@assets/rebook-text-logo-white.png" alt="Text Logo" />
+        <img src= {TextLogo} alt="Text Logo" />
         </ImageLogoText>
       </CardLogin>
     </MainLogin>
