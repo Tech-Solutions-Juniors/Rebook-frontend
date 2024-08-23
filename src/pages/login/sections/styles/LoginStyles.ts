@@ -1,5 +1,13 @@
 import styled from "styled-components";
 
+export const MainLogin = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 0 80px 0 ;
+  box-sizing: border-box; /
+`;
+
 export const CardLogin = styled.div`
   width: 425px;
   height: 600px;
@@ -66,8 +74,6 @@ export const ImageLogin = styled.div`
   }
 `;
 
-
-
 export const TextField = styled.div`
   margin: 25px 0 0px 0;
 `;
@@ -116,14 +122,6 @@ export const Error = styled.span`
   color: red;
 `;
 
-export const MainLogin = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-`;
-
 export const Form = styled.form`
   margin: 0px 40px 20px 40px;
   width: 80%;
@@ -139,7 +137,7 @@ export const ButtonLogin = styled.button`
 `;
 
 export const ImageLogoText = styled.div`
-  margin: 10px 0 0 0; 
+  margin: 10px 0 10px 0; 
   img {
     width: 60px;
     height: auto;

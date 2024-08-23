@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Input, ContainerInput, ToggleIcon } from '../styles/loginStyles';
+import { Input, ContainerInput, ToggleIcon } from '../styles/LoginStyles';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 

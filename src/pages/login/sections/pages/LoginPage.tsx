@@ -9,7 +9,7 @@ import {
   ImageLogoText,
   MainLogin,
   TextField,
-} from "../styles/loginStyles";
+} from "../styles/LoginStyles";
 
 import InputEmail from "../components/InputEmail";
 import InputPassword from "../components/InputPassword";
@@ -19,12 +19,12 @@ import GoogleLoginButton from "../components/GoogleLoginButton";
 import GitHubLoginButton from "../components/GitHubLoginButton";
 import FacebookLoginButton from "../components/FacebookLoginButton";
 
-import Logo from "@assets/rebook-logo.png";
-import LoginTitle from "@assets/login-title.png";
-import GoogleIcon from "@assets/Google-icon.png";
-import GitHubIcon from "@assets/GitHub-icon.png";
-import FacebookIcon from "@assets/Facebook-icon.png";
-import TextLogo from "@assets/rebook-text-logo-white.png";
+import Logo from "../../../../assets/rebook-logo.png";
+import LoginTitle from "../../../../assets/login-title.png";
+import GoogleIcon from "../../../../assets/Google-icon.png";
+import GitHubIcon from "../../../../assets/Github-icon.png";
+import FacebookIcon from "../../../../assets/facebook-icon.png";
+import TextLogo from "../../../../assets/rebook-text-logo-white.png";
 
 const LoginPage = () => {
   
