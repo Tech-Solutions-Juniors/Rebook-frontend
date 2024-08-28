@@ -4,8 +4,8 @@ export const MainLogin = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 80px 0 80px 0 ;
-  box-sizing: border-box; /
+  padding: 80px 0 80px 0;
+  box-sizing: border-box;
 `;
 
 export const CardLogin = styled.div`
@@ -17,11 +17,11 @@ export const CardLogin = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 
   .Forgot {
     font-size: 13px;
-    margin: 25px 0 20px 0 ;
+    margin: 25px 0 20px 0;
   }
 
   .Link {
@@ -31,7 +31,7 @@ export const CardLogin = styled.div`
 
   .ContinueWith {
     font-size: 16px;
-    color: #7B7B7B;
+    color: #7b7b7b;
     margin: 0 0 20px 0;
     display: flex;
     align-items: center;
@@ -40,18 +40,15 @@ export const CardLogin = styled.div`
   }
 
   .ContinueWith::after {
-    content: "";
-    position: absolute;
-    right: 0;
-    width: 210px; 
-    height: 1px; 
-    background-color: #7B7B7B;
+    width: 210px;
+    height: 1px;
+    background-color: #7b7b7b;
   }
 
   .Register {
     font-style: italic;
     font-size: 13px;
-    color: #7B7B7B;
+    color: #7b7b7b;
   }
 
   label {
@@ -95,7 +92,7 @@ export const ToggleIcon = styled.div`
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
-  color: #7B7B7B;
+  color: #7b7b7b;
 `;
 
 export const Container = styled.section`
@@ -107,7 +104,6 @@ export const SocialButton = styled.button`
   padding: 12px 37px;
   border-radius: 10px;
   cursor: pointer;
-  
   img {
     display: flex;
     flex-direction: column;
@@ -137,7 +133,7 @@ export const ButtonLogin = styled.button`
 `;
 
 export const ImageLogoText = styled.div`
-  margin: 10px 0 10px 0; 
+  margin: 10px 0 10px 0;
   img {
     width: 60px;
     height: auto;

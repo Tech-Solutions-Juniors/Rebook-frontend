@@ -5,7 +5,10 @@ declare module "styled-components" {
     containerMaxWidth: string;
 
     colors: {
+      black: string;
+      background: string;
       primary: string;
+      primaryDark: string;
       // secondary: string;
     };
   }

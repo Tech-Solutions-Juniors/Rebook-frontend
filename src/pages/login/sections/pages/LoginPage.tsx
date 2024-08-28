@@ -27,7 +27,6 @@ import FacebookIcon from "../../../../assets/facebook-icon.png";
 import TextLogo from "../../../../assets/rebook-text-logo-white.png";
 
 const LoginPage = () => {
-  
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
 
@@ -53,11 +52,11 @@ const LoginPage = () => {
     <MainLogin>
       <CardLogin>
         <ImageLogo>
-          <img src= {Logo} alt="Logo REBOOK" />
+          <img src={Logo} alt="Logo REBOOK" />
         </ImageLogo>
         <Form>
           <ImageLogin>
-            <img src= {LoginTitle} alt="Log in" />
+            <img src={LoginTitle} alt="Log in" />
           </ImageLogin>
 
           <TextField>
@@ -79,7 +78,11 @@ const LoginPage = () => {
               placeholder="Password"
             />
           </TextField>
-          <p className="Forgot"><a className="Link" href="">Forgot Password?</a></p>
+          <p className="Forgot">
+            <a className="Link" href="">
+              Forgot Password?
+            </a>
+          </p>
           <p className="ContinueWith">Or continue with</p>
           <Container>
             <GoogleLoginButton
@@ -111,6 +114,15 @@ const LoginPage = () => {
         />
         <ImageLogoText>
         <img src= {TextLogo} alt="Text Logo" />
+          <a className="Link" href="">
+            {" "}
+            Register for free
+          </a>
+        </ImageLogoText>
+        {error && <ErrorMessage message={error} />}
+        <LoginButton loading={loading} onClick={handleSubmit} text="Log in" />
+        <ImageLogoText>
+          <img src={TextLogo} alt="Text Logo" />
         </ImageLogoText>
       </CardLogin>
     </MainLogin>
