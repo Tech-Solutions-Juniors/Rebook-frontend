@@ -14,7 +14,6 @@ function App() {
     <ThemeProvider theme={main}>
       <Router>
         <Header />
-
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/signin" element={<Login />} />
