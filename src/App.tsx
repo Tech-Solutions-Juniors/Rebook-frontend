@@ -2,24 +2,38 @@ import "./shared/styles/global.css";
 import "react-phone-number-input/style.css";
 
 import { ThemeProvider } from "styled-components";
-import Home from "./pages/home/Home";
-import Login from "./pages/login/Login";
 import Header from "./shared/layout/header";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import { main } from "./shared/themes/main";
-import Register from "./pages/register";
+import publicRoutes from "@base/routes/public";
+import privateRoutes from "@base/routes/private";
+import { useAuthContext } from "./shared/hook/useAuthContext";
+import { useControllLocation } from "./shared/hook/useControllLocation";
+import { Optional } from "./shared/components/optional/Optional";
 
 function App() {
+  const { token } = useAuthContext();
+  const { lastUserLocation } = useControllLocation({ privateRoutes });
+
   return (
     <ThemeProvider theme={main}>
-      <Router>
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/signin" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-        </Routes>
-      </Router>
+      <Optional show={!!token} component={<Header />} />
+      <Routes>
+        {publicRoutes.map((e) => (
+          <Route
+            path={e.route}
+            element={!token ? e.element : <Navigate to={lastUserLocation} />}
+            key={e.route}
+          />
+        ))}
+        {privateRoutes.map((e) => (
+          <Route
+            path={e.route}
+            element={token ? e.element : <Navigate to="/signin" />}
+            key={e.route}
+          />
+        ))}
+      </Routes>
     </ThemeProvider>
   );
 }

@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { IRoute } from "@base/routes/public";
+import { IRoute } from "@base/@types/route";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 
