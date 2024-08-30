@@ -13,16 +13,22 @@ import { Optional } from "./shared/components/optional/Optional";
 
 function App() {
   const { token } = useAuthContext();
-  const { lastUserLocation } = useControllLocation({ privateRoutes });
+  const { lastUserLocation } = useControllLocation({ privateRoutes, token });
 
   return (
     <ThemeProvider theme={main}>
-      <Optional show={!!token} component={<Header />} />
+      <Optional show={true} component={<Header />} />
       <Routes>
         {publicRoutes.map((e) => (
           <Route
             path={e.route}
-            element={!token ? e.element : <Navigate to={lastUserLocation} />}
+            element={
+              !token || !e.notAcceptLogged ? (
+                e.element
+              ) : (
+                <Navigate to={lastUserLocation} />
+              )
+            }
             key={e.route}
           />
         ))}

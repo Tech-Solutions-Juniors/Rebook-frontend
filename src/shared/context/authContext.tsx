@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useLayoutEffect, useState } from "react";
 import { signinService } from "../../services";
 import { TOKEN_KEY } from "../constants";
 
@@ -20,7 +20,7 @@ export function AuthProvider({ children }: Props) {
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const maybeToken = localStorage.getItem(TOKEN_KEY);
     if (maybeToken) {
       setToken(maybeToken);
