@@ -27,7 +27,7 @@ export const Container = styled.section`
 
 export const CategoryList = styled.ul`
   display: flex;
-  gap: 2.4em;
+  gap: 1.2em;
 `;
 
 export const CategoryItem = styled.li`

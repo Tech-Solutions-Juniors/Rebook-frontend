@@ -22,6 +22,46 @@ const Books: IBook[] = [
     author: "HG, walles",
     category: "new",
     image:
+      "https://th.bing.com/th/id/OIP.LW9ZTVucsqhamFiLK_e1WgHaJ4?rs=1&pid=ImgDetMain",
+    name: "The Recullent",
+    price: 20.0,
+    title: "The Recullent",
+  },
+  {
+    id: 10,
+    author: "HG, walles",
+    category: "new",
+    image:
+      "https://th.bing.com/th/id/R.d96debb9dee2a2185935c763c026dde3?rik=P8vyNUVC1byvlQ&riu=http%3a%2f%2fdesignlooter.com%2fimages%2fbook-cover-svg-17.jpg&ehk=6H2hTT47y0jiSSJGG0dVeBIE2Is1SIO7RJ0Qg3vCmjo%3d&risl=&pid=ImgRaw&r=0",
+    name: "The Recullent",
+    price: 20.0,
+    title: "The Recullent",
+  },
+  {
+    id: 10,
+    author: "HG, walles",
+    category: "new",
+    image:
+      "https://th.bing.com/th/id/R.d96debb9dee2a2185935c763c026dde3?rik=P8vyNUVC1byvlQ&riu=http%3a%2f%2fdesignlooter.com%2fimages%2fbook-cover-svg-17.jpg&ehk=6H2hTT47y0jiSSJGG0dVeBIE2Is1SIO7RJ0Qg3vCmjo%3d&risl=&pid=ImgRaw&r=0",
+    name: "The Recullent",
+    price: 20.0,
+    title: "The Recullent",
+  },
+  {
+    id: 10,
+    author: "HG, walles",
+    category: "new",
+    image:
+      "https://th.bing.com/th/id/R.d96debb9dee2a2185935c763c026dde3?rik=P8vyNUVC1byvlQ&riu=http%3a%2f%2fdesignlooter.com%2fimages%2fbook-cover-svg-17.jpg&ehk=6H2hTT47y0jiSSJGG0dVeBIE2Is1SIO7RJ0Qg3vCmjo%3d&risl=&pid=ImgRaw&r=0",
+    name: "The Recullent",
+    price: 20.0,
+    title: "The Recullent",
+  },
+  {
+    id: 10,
+    author: "HG, walles",
+    category: "new",
+    image:
       "https://th.bing.com/th/id/R.d96debb9dee2a2185935c763c026dde3?rik=P8vyNUVC1byvlQ&riu=http%3a%2f%2fdesignlooter.com%2fimages%2fbook-cover-svg-17.jpg&ehk=6H2hTT47y0jiSSJGG0dVeBIE2Is1SIO7RJ0Qg3vCmjo%3d&risl=&pid=ImgRaw&r=0",
     name: "The Recullent",
     price: 20.0,
@@ -43,7 +83,7 @@ const AllBooks: React.FC<Props> = () => {
             <SectionTitle>Todos</SectionTitle>
             <CategoryList>
               {categories.map((e) => (
-                <CategoryItem>{e}</CategoryItem>
+                <CategoryItem key={e}>{e}</CategoryItem>
               ))}
             </CategoryList>
           </Header>

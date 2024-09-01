@@ -4,7 +4,6 @@ import Banner from "./sections/Banner";
 import testBookBanner from "@assets/TEST_BOOK_IMAGES.png";
 
 const Home = () => {
-  console.log(19);
   return (
     <main>
       <Banner
