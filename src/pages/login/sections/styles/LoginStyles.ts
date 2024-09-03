@@ -30,6 +30,7 @@ export const CardLogin = styled.div`
   }
 
   .ContinueWith {
+    weight: 100%;
     font-size: 16px;
     color: #7b7b7b;
     margin: 0 0 20px 0;
@@ -37,12 +38,15 @@ export const CardLogin = styled.div`
     align-items: center;
     position: relative;
     padding-right: 20px;
+    white-space: nowrap;
   }
 
   .ContinueWith::after {
-    width: 210px;
+    content: "";
+    width: 100%;
     height: 1px;
     background-color: #7b7b7b;
+    transform: translateX(10px);
   }
 
   .Register {
@@ -98,6 +102,7 @@ export const ToggleIcon = styled.div`
 export const Container = styled.section`
   display: flex;
   justify-content: space-between;
+  
 `;
 
 export const SocialButton = styled.button`
