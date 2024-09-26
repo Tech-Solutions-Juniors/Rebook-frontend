@@ -214,7 +214,7 @@ const Register: React.FC = () => {
         </RegistrationMethodsButtonsContainer>
 
         <LoginInsteadText>
-          Already have an account? <Link to="/login">Login</Link>
+          Already have an account? <Link to="/signin">Login</Link>
         </LoginInsteadText>
 
         <RegisterButton>Register</RegisterButton>

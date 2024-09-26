@@ -104,7 +104,7 @@ const LoginPage = () => {
         </Form>
         <p className="Register">
           Don’t have an account yet?
-          <a className="Link" href=""> Register for free</a>
+          <a className="Link" href="/register"> Register for free</a>
         </p>
         {error && <ErrorMessage message={error} />}
         <LoginButton
@@ -114,15 +114,6 @@ const LoginPage = () => {
         />
         <ImageLogoText>
         <img src= {TextLogo} alt="Text Logo" />
-          <a className="Link" href="">
-            {" "}
-            Register for free
-          </a>
-        </ImageLogoText>
-        {error && <ErrorMessage message={error} />}
-        <LoginButton loading={loading} onClick={handleSubmit} text="Log in" />
-        <ImageLogoText>
-          <img src={TextLogo} alt="Text Logo" />
         </ImageLogoText>
       </CardLogin>
     </MainLogin>
